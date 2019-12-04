@@ -16,7 +16,7 @@ body {
 .container {
 	width: 90%;		
 	margin: auto;
-	max-width: 1200px;
+	max-width: 2000px;
 	background-color: #e3e3e3; 
 }
 .clearfix:after  {
@@ -32,7 +32,7 @@ header {
 header h1 {
 	padding:90px 55px 0px 35px ;    
 	margin-bottom:0px ;
-	font-size:3em ;
+	font-size:2.8em ;
 	color: white;
 	text-align: center;
 }
@@ -47,15 +47,39 @@ header h3 {
 /*Navigation Styles*/
 .navbar  {
 	overflow: hidden;
-	background-color: #f95959;
+	background-color: #fa4949;
+	
 }
-.navbar a {
-	float: right;
-	font-size: 1.1em;
-	color: white;
-	text-align: center;
-	padding: 20px 20px;		
+.left a {
+	float: left;
+	padding: 15px 30px;
 	text-decoration: none;
+	color: white;
+}
+.center ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+.center {
+	border: none;
+    list-style:none;
+    margin:0;
+    padding:0;
+	text-align: center;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.center ul li {
+	display:inline;
+}
+.center ul li a {
+    display:inline-block;
+	padding: 15px 30px;
+	text-decoration: none;
+	color: white;
 }
 .dropdown {
 	float: right;
@@ -67,13 +91,13 @@ header h3 {
 	border: none;
 	outline: none;
 	color: white;
-	padding: 20px 20px;	
+	padding: 15px 40px;
 	background-color: inherit;
 	font-family: inherit;
 	margin: 0;
 }
 .navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
-   background-color: #ff8888;  
+   background-color: #f86a6a;  
 }
 .dropdown-content, #navbarBurger{
 	display: none;
@@ -127,7 +151,13 @@ footer a {
 /*Responsive Styles: Big-Small */
 @media screen and (max-width: 850px) {
 	header h1  {
-		font-size: 3em;    
+		font-size: 1.8em;    
+	}
+	.dropdown .dropbtn {
+		padding: 15px 3px;
+	}
+	.navbar a {
+		padding: 15px 3px;
 	}
 }
 @media screen and (max-width: 580px) {
