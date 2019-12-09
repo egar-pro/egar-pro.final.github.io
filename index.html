@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-      <!-- 
-          Author: Ethan Gardner
-          File: index.html
-          Date: 12.2.2019
-          Project: Final Project
-      -->
-      <title> Railroad Historic Museum of Springfield Missouri </title>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <link href="https://fonts.googleapis.com/css?family=Public+Sans&display=swap" rel="stylesheet">
-      <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-      <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-      <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-      <link rel="manifest" href="images/site.webmanifest">
-      <link rel="stylesheet" href="styles/reset.css" media="all" />
-      <link rel="stylesheet" href="styles/styles.css" />
-      <link rel="stylesheet" href="styles/print.css" media="print" />
+    <!-- 
+        Author: Ethan Gardner
+        File: index.html
+        Date: 12.2.2019
+        Project: Final Project
+    -->
+    <title> Railroad Historic Museum of Springfield Missouri </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Public+Sans&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
+    <link rel="stylesheet" href="styles/reset.css" media="all" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/print.css" media="print" />
   </head>
   <body>
     <div class="container">
@@ -32,7 +32,7 @@
           </div>
           <div class="center">
             <ul>
-              <li><a href="index.html"> Home </a></li>
+              <li><a class="active" href="index.html"> Home </a></li>
               <li><a href="calendar.html"> Calendar </a></li>
               <li><a href="blog.html"> Blog </a></li>
               <li><a href="photos.html"> Photos </a></li>
@@ -55,8 +55,8 @@
             </div>
           </div>
         </div>
-        <div class= "navbarBurger">
-          <i class="fas fa-bars fa-2x" onclick="myXFunction()"></i>
+        <div class="navbarBurger">
+          <i class="fas fa-bars fa-3x" onclick="myXFunction()"></i>
           <div class="navbarBurger-content" id="navbarBurger" >
             <a href="reserve.html"> Reserve The Train! </a>
             <a href="index.html"> Home </a>
@@ -73,7 +73,7 @@
           // Close the dropdown if the user clicks outside of it
           window.onclick = function(e) {
             if (!e.target.matches('.dropbtn')) {
-                var dropdown = document.getElementById("dropdown");
+              var dropdown = document.getElementById("dropdown");
               if (dropdown.classList.contains('show')) {
                 dropdown.classList.remove('show');
               }
@@ -88,18 +88,18 @@
               var dropdowns = document.getElementsById("navbarBurger");
               var i;
               for(i = 0; i < dropdowns.length; i++){
-                  var openDropdown = dropdowns[i];
-                  if(openDropdown.classList.contains('showX')){
-                    openDropdown.classList.remove('showX');
-                  }
+                var openDropdown = dropdowns[i];
+                if(openDropdown.classList.contains('showX')){
+                  openDropdown.classList.remove('showX');
+                }
               }
             }
           }
         </script>
       </header>
     </div>
-      <footer> 
-          <p>&copy; RAILROAD HISTORICAL MUSEUM INC. &#x26AC; <a href="mailto:railroadhistoricalmuseum@yahoo.com"> Email Us </a> &#x26AC; <a href="tel:417-833-0994"> 417-833-0994 </a></p>
-      </footer>
+    <footer> 
+      <p>&copy; RAILROAD HISTORICAL MUSEUM INC. &#x26AC; <a href="mailto:railroadhistoricalmuseum@yahoo.com"> Email Us </a> &#x26AC; <a href="tel:417-833-0994"> 417-833-0994 </a></p>
+    </footer>
   </body>
 </html>
