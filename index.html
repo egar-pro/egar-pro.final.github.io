@@ -19,6 +19,7 @@
     <link rel="manifest" href="images/site.webmanifest">
     <link rel="stylesheet" href="styles/reset.css" media="all" />
     <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/slideshow.css" />
     <link rel="stylesheet" href="styles/print.css" media="print" />
   </head>
   <body>
@@ -97,6 +98,110 @@
           }
         </script>
       </header>
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+            <iframe width="100%" height="750" src="https://www.youtube.com/embed/OCHAJTmYQiI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="mySlides fade">
+          <img src="images/train1.jpg">
+        </div>
+        <div class="mySlides fade">
+          <img src="images/train2.jpg">
+        </div>
+        <div class="mySlides fade">
+          <img src="images/train3.jpg">
+        </div>
+        <div class="mySlides fade">
+          <img src="images/train4.jpg">
+        </div>
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br>
+      <!-- The dots/circles -->
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+      </div>
+      <script> 
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+        } 
+      </script>
+      <div class="cols clearfix">
+        <h3> About Us </h3>
+        <div class="about-columns">
+          <h4> About Us </h4>
+          <p> We are a nonprofit museum dedicated to the preservation of Railroad History and the heritage of the past, educating present and future generations. We have artifacts, equipment, photos, paintings and much more from the St. Louis San-Francisco Railroad and other Railroads.</p> 
+        </div>
+        <div class="about-columns">
+          <h4> Location </h4>
+          <p> Our museum is located in the St. Louis San-Francisco Locomotive No.4524, Burlington Baggage Car, Chicago and Northwestern Commuter Car and Burlington Northern Caboose, as well as the new Max Jahn Depot. The depot is a replica of an 1890s-era rural depot, based on the original prints from the depot at Elsinore, MO.</p> 
+        </div>
+        <div class="about-columns">
+          <h4> What to Do </h4>
+          <p> There are many hands-on activities for visitors of all ages. We also have videos of  Steam and Diesel Trains, and a Model Train Layout. You are welcome to explore the Frisco Locomotive 4524, Commuter Car, Caboose, and the depot.</p> 
+        </div>
+        <div class="about-columns"> 
+          <h4> Other Cool Features </h4>
+          <p> We are in Grant Beach Park with access to a public pool, playground and picnic area. We are also on City Utilities Bus Route.</p>
+        </div>
+      </div>
+      <div class="cols clearfix">
+        <h3> Directions </h3>
+        <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d944.532569787456!2d-93.30077229984666!3d37.223590162469165!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87cf6258c06c02cd%3A0xc4f61c1646501b3f!2sRailroad%20Historical%20Museum!5e0!3m2!1sen!2sus!4v1575937760411!5m2!1sen!2sus" width="75%" height="600" frameborder="0" style="border:1px;" allowfullscreen=""></iframe>
+        <p> 
+          1353 North Douglas Avenue, Springfield, Missouri<br>
+          Located in Grant Beach Park<br>
+          Just west of Grant Street One block on Lynn St
+        </p>
+      </div>
+      <div class="cols clearfix">
+        <h3> Entry and or Birthday Parties </h3>
+        <p id="times"> 
+          2:00pm to 4:00pm Saturdays Only! <br>
+          There is No Charge for Admission.
+        </p>
+        <div class="about-columns">
+          <p> Private Birthday Parties on the Train are From <br> 12:00pm Until 2:00pm Saturdays Only. </p><br>
+          <p> There is A Suggested $40.00 Fee <br> to the Museum for the Party. </p>
+        </div>
+        <div class="about-columns">
+          <p> Private Tours Free And Available Weekdays By Appointment <br> For Educational, Charitable, Civic Groups Or Families.</p><br>
+          <p> Reserve a Party By Filling Out the Form for Reserve the Train or Preferably By Phone: <a href="tel:417-833-0994"> 417-833-0994 </a>,<br> Tour Appointments May Be Made By Email: <a href="mailto:railroadhistoricalmuseum@yahoo.com"> Click Here For Email</a>.</p>
+        </div>
+        <button id='reserve' type="button" onclick="window.location.href = 'reserve.html'"> Reserve the Train! </button>
+        <p> We promote Operation Lifesaver  sponsored by BNSF railway. </p>
+      </div>
     </div>
     <footer> 
       <p>&copy; RAILROAD HISTORICAL MUSEUM INC. &#x26AC; <a href="mailto:railroadhistoricalmuseum@yahoo.com"> Email Us </a> &#x26AC; <a href="tel:417-833-0994"> 417-833-0994 </a></p>

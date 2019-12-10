@@ -2,7 +2,7 @@
 	Author:      Ethan Gardner
 	Due_Date:    11/25/2019
 	Assignment:  Final
-	File:        print.css
+	File:        styles.css 
 */
 
 /* Structurial Styles */
@@ -16,14 +16,14 @@ body {
 	width: 90%;		
 	margin: auto;
 	max-width: 2000px;
-	background-color: #e3e3e3; 
+	background-color: #e3e3e3;
+	box-shadow: 0px 2px 10px 0px rgb(52, 53, 53);
 }
 .clearfix:after  {
 	content: "";
 	display: block;
 	clear: both;
 }
-
 
 /*Header Styles*/
 header { 
@@ -48,14 +48,15 @@ header h3 {
 .navbar  {
 	overflow: hidden;
 	background-color: #fa4949;
+	font-size: 1em;
 }
 .left a {
 	float: left;
-	padding: 15px 20px;
+	padding: 14.5px 20px;
 	text-decoration: none;
 	color: white;
 }
-.center ul li a.active {
+a.active {
 	background-color: #fd7575;
 }
 .center ul {
@@ -76,7 +77,7 @@ header h3 {
 	width: 50%;
 }
 .center ul li {
-	display:inline;
+	display: inline;
 }
 .center ul li a {
     display:inline-block;
@@ -129,18 +130,69 @@ header h3 {
 	display: none;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
+/*Content Styles*/
+.cols {
+	padding: 30px 60px;
+	margin-bottom: 0px;
+}
+.cols h3 {
+	font-size: 3em;
+	text-align: center;
+	padding: 25px;
+	background-color: #455d7a;
+	height: 70px;
+	color: white;
+	border-radius: 10px;
+}
+.cols p {
+	font-size: 18px;
+	line-height: 1.5;
+	padding-top: 5px;
+	padding-bottom: 20px;
+	text-align: center;
+}
+.about-columns h4 {
+	font-size: 2em;
+	padding-top: 20px;
+}
+.about-columns p {
+	font-size: 24px;
+	line-height: 1.5;
+	padding: 20px;
+}
+.about-columns a {
+	text-decoration: none;
+}
+.about-columns {
+	float: left;
+	width: 50%;
+}
+#times {
+	color: red;
+	font-size: 2em;
+}
+/*Map Styles*/
+#map {
+	position: relative;
+	left: 50%;
+	transform: translate(-50%, 0%);
+	width: 75%;
+}
+/* Button Styles */
+#reserve {
+	position: relative;
+	left: 50%;
+	transform: translate(-50%, 0%);
+	padding: 20px 30px;
+	font-size: 2em;
+	background-color: #455d7a; 
+	color: white;
+	border: none;
+	border-radius: 5px;
+}
+#reserve:hover {
+	background-color: #5a7aa1;
+}
 /*Footer Styles*/
 footer {
 	text-align: center;
@@ -153,6 +205,7 @@ footer a {
 	text-decoration: none;
 	color: lightgrey;
 }
+
 /*Responsive Styles: Big-Small */
 @media screen and (max-width: 850px) {
 	header h1  {
@@ -164,6 +217,18 @@ footer a {
 	.dropdown .dropbtn {
 		padding: 15px 20px;
 	}
+	.cols p {
+		font-size: 20px;
+	}
+	.cols h4 {
+		font-size: 24px;
+	}
+	.cols h3 {
+		font-size: 26px;
+	}
+	#map {
+		width: 100%;
+	}
 }
 @media screen and (max-width: 580px) {
 	header {
@@ -171,6 +236,21 @@ footer a {
 	}
 	header h1 {
 		font-size: 1.5em;
+	}
+	.about-columns {
+		width: 100%;
+	}
+	#map {
+		height: 300px;
+	}
+	.cols p {
+		font-size: 20px;
+	}
+	.cols h4 {
+		font-size: 24px;
+	}
+	.cols h3 {
+		font-size: 26px;
 	}
 	/* Dropdown Button on Hover and Focus */
 	.dropbtn:hover, .dropbtn:focus {
