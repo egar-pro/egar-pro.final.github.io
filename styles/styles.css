@@ -151,6 +151,13 @@ a.active {
 	padding-bottom: 20px;
 	text-align: center;
 }
+td {
+	font-size: 18px;
+	line-height: 1.5;
+	padding-top: 5px;
+	padding-bottom: 20px;
+	text-align: center;
+}
 .about-columns h4 {
 	font-size: 2em;
 	padding-top: 20px;
@@ -170,6 +177,9 @@ a.active {
 #times {
 	color: red;
 	font-size: 2em;
+}
+iframe {
+	width: 100%;
 }
 /*Map Styles*/
 #map {
@@ -192,6 +202,12 @@ a.active {
 }
 #reserve:hover {
 	background-color: #5a7aa1;
+}
+.line {
+	border-bottom: 1px solid #000;
+}
+.upline {
+	border-top: 1px solid #000;
 }
 /*Footer Styles*/
 footer {
