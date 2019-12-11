@@ -46,7 +46,10 @@
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media (max-width: 600px) {
     .column {
-        flex: 100%;
-        max-width: 100%;
+        flex: 33%;
+        max-width: 33%;
+    }
+    .display-photo img {
+        width: 100%;
     }
 }

@@ -3,7 +3,7 @@
   <head>
     <!-- 
         Author: Ethan Gardner
-        File: calendar.html
+        File: reverse.html
         Date: 12.2.2019
         Project: Final Project
     -->
@@ -19,7 +19,7 @@
     <link rel="manifest" href="images/site.webmanifest">
     <link rel="stylesheet" href="styles/reset.css" media="all" />
     <link rel="stylesheet" href="styles/styles.css" />
-    <link rel="stylesheet" href="styles/calendar.css" />
+    <link rel="stylesheet" href="styles/form.css" />
     <link rel="stylesheet" href="styles/print.css" media="print" />
   </head>
   <body>
@@ -29,12 +29,12 @@
         <h3> of Springfield Missouri </h3>
         <div class="navbar">
           <div class="left">
-            <a href="reserve.html"> Reserve The Train! </a>
+            <a class="active" href="reserve.html"> Reserve The Train! </a>
           </div>
           <div class="center">
             <ul>
               <li><a href="index.html"> Home </a></li>
-              <li><a class="active" href="calendar.html"> Calendar </a></li>
+              <li><a href="calendar.html"> Calendar </a></li>
               <li><a href="blog.html"> Blog </a></li>
               <li><a href="photos.html"> Photos </a></li>
             </ul>
@@ -98,62 +98,30 @@
           }
         </script>
       </header>
-      <div class="cols clearfix">
-        <table> 
-          <div class="month">
-            <ul>
-              <li class="prev">&#10094;</li>
-              <li class="next">&#10095;</li>
-              <li>December<br><span style="font-size:18px">2019</span></li>
-            </ul>
-          </div>
-          <ul class="weekdays">
-            <li>Sunday</li>
-            <li>Monday</li>
-            <li>Tuesday</li>
-            <li>Wednesday</li>
-            <li>Thursday</li>
-            <li>Friday</li>
-            <li>Saturday</li>
-          </ul>
-          <ul class="days">
-            <li>1<br>SPECIAL OPENINGS</li>
-            <li>2<br>1:00 pm<br>SPECIAL TOUR</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
-            <li>6</li>
-            <li>7</li>
-            <li>8</li>
-            <li>9</li>
-            <li>10</li>
-            <li><span class="active">11</span></li>
-            <li>12</li>
-            <li>13<br>1:00 pm<br>HOME SCHOOLED SPECIAL TOUR</li>
-            <li>14</li>
-            <li>15</li>
-            <li>16</li>
-            <li>17</li>
-            <li>18</li>
-            <li>19</li>
-            <li>20</li>
-            <li>21</li>
-            <li>22</li>
-            <li>23</li>
-            <li>24</li>
-            <li>25</li>
-            <li>26</li>
-            <li>27</li>
-            <li>28</li>
-            <li>29</li>
-            <li>30</li>
-            <li>31</li>
-          </ul> 
-        </table>
-      </div>
-    </div>
-    <footer> 
-      <p>&copy; RAILROAD HISTORICAL MUSEUM INC. &#x26AC; <a href="mailto:railroadhistoricalmuseum@yahoo.com"> Email Us </a> &#x26AC; <a href="tel:417-833-0994"> 417-833-0994 </a></p>
-    </footer>
-  </body>
+		<div class="cols clearfix">
+			<div class="contain">
+				<h2>Your form is submitted</h2>
+				<div class="results">
+					<h3>this was your input data:</h3>
+					<script>
+						var formData = location.search;
+						formData = formData.substring(1, formData.length);
+						while (formData.indexOf("+") !== -1) {
+						formData = formData.replace("+", " ");
+						}
+						formData = decodeURIComponent(formData);
+						var formArray = formData.split("&");
+						for (var i = 0; i < formArray.length; i = i + 1) {
+						document.write("<p>" + formArray[i] + "</p>");
+						}
+					</script>
+					<h4>We will contact you for further information!</h4>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer> 
+		<p>&copy; RAILROAD HISTORICAL MUSEUM INC. &#x26AC; <a href="mailto:railroadhistoricalmuseum@yahoo.com"> Email Us </a> &#x26AC; <a href="tel:417-833-0994"> 417-833-0994 </a></p>
+	</footer>
+   </body>
 </html>
